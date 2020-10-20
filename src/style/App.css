@@ -129,3 +129,13 @@ input {
   width: 30px;
   align-items: center;
 }
+
+.editField {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.editInp {
+  width: 500px;
+  margin-left: 0;
+}

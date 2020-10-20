@@ -143,7 +143,7 @@ iframe {
 .row.header:hover {
   color: #000000;
   background: #ffffff;
-  cursor: none;
+  cursor: initial;
 }
 
 @media screen and (max-width: 768px) {
