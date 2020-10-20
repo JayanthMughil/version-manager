@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+
+@import 'css/main.css';
+@import 'css/util.css';
+
+html, body {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #e2e2e2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:placeholder-shown {
+  padding-left: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  height: 40px;
+  margin-left: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #1d6eff;
+  border-radius: 3px;
+  color: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input {
+  background-color: #e2e2e2;
+  height: 40px;
+  margin-left: 20px;
+  border-radius: 3px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bodyWrapper {
+  background-color: #e2e2e2;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  background-color: #ffffff;
+  margin: 10px;
+  height: 120px;
+  vertical-align: middle;
+  border-radius: 3px;
+}
+
+.headerLabel {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.headerTextOne {
+  color: #a8a8a8;
+  font-size: large;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.headerTextTwo {
+  padding-bottom: 5px;
+  padding-top: 5px;
+  color: #16335b;
+  font-size: xx-large;
+}
+
+.tableWrapper {
+  height: 70%;
+  position: relative;
+  margin: 10px;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+
+
+.tableContent {
+  padding: 15px;
+  overflow: auto;
+  height: 100%;
+}
+
+.footer {
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  height: 10%;
+  display: block;
+  overflow: auto;
+}
+
+.inputFields {
+  margin-top: 25px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.row .cell.inprog {
+  color: #e90000;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row .cell.unrel {
+  color: #060fc6;
+  font-weight: bold;
+}
+
+.row .cell.rel {
+  color: #00a314;
+  font-weight: bold;
 }
