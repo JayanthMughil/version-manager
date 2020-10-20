@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Line } from 'rc-progress';
 import '../style/App.css';
 
 const array = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
@@ -37,7 +38,7 @@ class App extends Component {
 							Vincent Williamson
 						</div>
 						<div className="cell" data-title="Age">
-							31
+							<Line percent="70" style={{width: "200px"}} strokeWidth="6" trailWidth="6" strokeColor="#2532FF" />
 						</div>
 						<div className="cell inprog" data-title="Job Title">
 							iOS Developer
