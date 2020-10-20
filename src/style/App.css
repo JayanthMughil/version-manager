@@ -32,6 +32,7 @@ button {
 }
 
 input {
+  padding-left: 10px;
   background-color: #e2e2e2;
   height: 40px;
   margin-left: 20px;
@@ -115,6 +116,12 @@ input {
 .row .cell.rel {
   color: #00a314;
   font-weight: bold;
+}
+
+.desc {
+  width: 350px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .menuIcon {

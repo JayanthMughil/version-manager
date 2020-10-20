@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { TableRow } from "./tableRow";
 import { AddBox } from "./addBox";
-
-const array = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+import { productInfo } from "./data";
 
 class Content extends Component {
 
@@ -21,9 +20,9 @@ class Content extends Component {
 					<div className="cell">Description</div>
 					<div className="cell">Action</div>
 				</div>
-				{array.map((item, index) => {
+				{productInfo.map((details, index) => {
 					return (
-					 <TableRow key={index}/>
+					 <TableRow key={index} details={details} />
 					);
 				})}
 			</div>

@@ -209,12 +209,12 @@ iframe {
 }
 
 .row .cell:nth-child(1) {
-  width: 300px;
+  width: 250px;
   padding-left: 40px;
 }
 
 .row .cell:nth-child(2) {
-  width: 270px;
+  width: 320px;
 }
 
 .row .cell:nth-child(3) {
