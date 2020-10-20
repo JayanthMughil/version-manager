@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Line } from 'rc-progress';
+import menuIcon from "../images/menu.svg";
 
 class TableRow extends Component {
 
@@ -25,7 +26,9 @@ class TableRow extends Component {
                     Washington
                 </div>
                 <div className="cell" data-title="Location">
-                    31
+                    <div className="menuIcon" >
+                        <img src={menuIcon} alt=""/>
+                    </div>
                 </div>
             </div>
         );

@@ -7,6 +7,7 @@ class AddBox extends Component {
             <div className="footer">
                 <div className="inputFields">
                     <input placeholder="Version name" style={{flex: 0.5}} />
+                    <input placeholder="Progress" />
                     <input placeholder="Start date" />
                     <input placeholder="Release date" />
                     <input placeholder="Description" style={{flex: 0.3}} />

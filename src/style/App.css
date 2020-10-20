@@ -13,6 +13,11 @@ html, body {
   background-color: #e2e2e2;
 }
 
+img {
+  height: 100%;
+  width: 100%;
+}
+
 :placeholder-shown {
   padding-left: 10px;
 }
@@ -110,4 +115,10 @@ input {
 .row .cell.rel {
   color: #00a314;
   font-weight: bold;
+}
+
+.menuIcon {
+  height: 30px;
+  width: 30px;
+  align-items: center;
 }
