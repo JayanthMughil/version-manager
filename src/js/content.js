@@ -26,7 +26,7 @@ class Content extends Component {
 				</div>
 				{productInfo.map((details, index) => {
 					return (
-					 <TableRow key={index} details={details} />
+					 <TableRow key={index} reRender={this.reRender} index={index} details={details} />
 					);
 				})}
 			</div>

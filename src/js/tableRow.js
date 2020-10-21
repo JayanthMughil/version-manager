@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import { Line } from 'rc-progress';
-import { status } from "./data";
+import { status, productInfo, versionArray } from "./data";
 import { EditBox } from "./editBox";
-import Button from '@material-ui/core/Button';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem'
 import menuIcon from "../images/menu.svg";
@@ -52,6 +49,13 @@ class TableRow extends Component {
         this.openEditBox();
     }
 
+    handleDelete = () => {
+        this.closeMenu();
+        versionArray.splice(this.props.index, 1);
+        productInfo.splice(this.props.index, 1);
+        this.props.reRender();
+    }
+
     render () {
         return (
             <>
@@ -91,7 +95,7 @@ class TableRow extends Component {
                     onClose={this.closeMenu}
                 >
                     <MenuItem onClick={this.handleMenuEdit}>Edit</MenuItem>
-                    <MenuItem onClick={this.closeMenu}>Delete</MenuItem>
+                    <MenuItem onClick={this.handleDelete}>Delete</MenuItem>
                 </Menu>
                 <Dialog
                 open={this.state.isEdit}
@@ -100,19 +104,9 @@ class TableRow extends Component {
                 >
                     <DialogTitle id="max-width-dialog-title">Edit Box</DialogTitle>
                     <DialogContent>
-                    <DialogContentText>
-                        You can edit your content here
-                    </DialogContentText>
-                        <EditBox />
+                        <EditBox index={this.props.index} reRender={this.props.reRender}
+                         details={this.props.details} closeEditBox={this.closeEditBox}/>
                     </DialogContent>
-                    <DialogActions>
-                    <Button onClick={this.closeEditBox} color="primary">
-                        Edit
-                    </Button>
-                    <Button onClick={this.closeEditBox} color="primary">
-                        Cancel
-                    </Button>
-                    </DialogActions>
                 </Dialog>
             </>
         );

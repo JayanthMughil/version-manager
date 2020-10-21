@@ -136,6 +136,17 @@ input {
   margin-bottom: 5px;
 }
 
+.btnField {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.editbtn {
+  width: 100px;
+  margin-left: 0px;
+}
+
 .editInp {
   width: 500px;
   margin-left: 0;

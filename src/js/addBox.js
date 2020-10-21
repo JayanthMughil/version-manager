@@ -20,8 +20,7 @@ class AddBox extends Component {
             startDate: new Date(),
             releaseDate: new Date(),
             startString: "",
-            endString: "",
-            status: ""
+            endString: ""
         };
     }
 
@@ -88,7 +87,6 @@ class AddBox extends Component {
 
     getStatus = () => {
         let stat;
-        debugger;
         if (validateProgress(this.progRef.current.value)) {
             const num = Number(this.progRef.current.value);
             if (num === 0) {
@@ -119,9 +117,10 @@ class AddBox extends Component {
             status: this.getStatus(),
             sdate: this.sdateRef.current.value,
             rdate: this.rdateRef.current.value,
+            sdateObj: this.state.startDate,
+            rdateObj: this.state.releaseDate,
             desc: this.descRef.current.value
         };
-        debugger;
         versionArray.push(entryObj.vname);
         productInfo.push(entryObj);
         this.props.reRender();
