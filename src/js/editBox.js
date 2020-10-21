@@ -184,7 +184,7 @@ class EditBox extends Component {
                     ref={this.descRef} placeholder="Description" style={{flex: 0.3}} />
                     </div>
                     <div className="btnField">
-                        <button className="editbtn" onClick={this.handleEntryEdit}>Edit</button>
+                        <button className="editbtn" onClick={this.handleEntryEdit}>Save</button>
                         <button className="editbtn" onClick={this.props.closeEditBox} style={{marginLeft: "20px"}}>Cancel</button>
                     </div>
                 </div>
