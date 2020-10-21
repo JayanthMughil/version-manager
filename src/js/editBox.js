@@ -164,7 +164,7 @@ class EditBox extends Component {
                     <div className="editField">
                     <input className="editInp"
                     defaultValue={this.props.details.progress}
-                    onBlur={this.checkProgress} ref={this.progRef} placeholder="Progress (1-100)" />
+                    onBlur={this.checkProgress} ref={this.progRef} placeholder="Progress (0-100)" />
                     </div>
                     <div className="editField">
                     <input className="editInp" 

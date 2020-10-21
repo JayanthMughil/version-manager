@@ -163,7 +163,7 @@ class AddBox extends Component {
                         <input placeholder="Version name"
                         onBlur={this.checkVersion}
                         ref={this.versRef} style={{flex: 0.5}} />
-                        <input placeholder="Progress (1-100)"
+                        <input placeholder="Progress (0-100)"
                         onBlur={this.checkProgress}
                         ref={this.progRef} />
                         <input placeholder="Start date" ref={this.sdateRef} value={this.state.startString}
