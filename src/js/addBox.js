@@ -110,7 +110,9 @@ class AddBox extends Component {
         this.descRef.current.value = "";
         this.setState({
             startString: "",
-            endString: ""
+            endString: "",
+            startDate: new Date(),
+            releaseDate: new Date()
         });
     }
 
