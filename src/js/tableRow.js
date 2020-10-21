@@ -75,7 +75,7 @@ class TableRow extends Component {
                         {this.props.details.sdate}
                     </div>
                     <div className="cell" data-title="rdate">
-                        {this.props.details.rdate}
+                        {this.props.details.rdate !== "" ? this.props.details.rdate : "--"}
                     </div>
                     <div className="cell" data-title="desc">
                         <div className="desc">
