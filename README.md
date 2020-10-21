@@ -4,65 +4,50 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm install`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Installs all the required dependencies for the project.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### `npm start`
 
-### `yarn test`
+Launches the version manager in the local server at port 3000.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Libraries used
 
-### `yarn build`
+@date-io/date-fns: "^1.3.13",
+@material-ui/core: "^4.11.0",
+@material-ui/lab: "^4.0.0-alpha.56",
+@material-ui/pickers: "^3.2.10",
+@testing-library/jest-dom: "^4.2.4",
+@testing-library/react: "^9.3.2",
+@testing-library/user-event: "^7.1.2",
+date-fns: "^2.16.1",
+rc-progress: "^3.1.0",
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Product usage - Version manager
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Version manager is used to track release of new and existing versions of the product.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Add entry**
 
-### `yarn eject`
+=> An add box with a number of input fields can be found at the bottom which can be used to add entries to the table.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+=> Version name is unique and cannot be duplicated.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+=> Progress shows the progress of the version in a progress bar. Its values should be between 0 to 100.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+=> Start date and end date indicates the duration of the version. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+=> Description gives some additional information on the version.
 
-## Learn More
+=> Clicking on the add button adds the entry to the row.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Menu**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+=> Menu icon on the row consists of two options, edit and delete.
 
-### Code Splitting
+=> Clicking on the delete option deleted the row.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+=> Clicking on the edit option opens an edit box similar to that of add.
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
