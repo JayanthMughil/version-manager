@@ -5,6 +5,10 @@ import { productInfo } from "./data";
 
 class Content extends Component {
 
+	reRender = () => {
+		this.forceUpdate();
+	}
+
     render () {
         return (
         <>
@@ -28,7 +32,7 @@ class Content extends Component {
 			</div>
           </div>
         </div>
-		<AddBox />
+		<AddBox reRender={this.reRender} />
         </>
         );
     }

@@ -75,10 +75,14 @@ class EditBox extends Component {
                     <input className="editInp" placeholder="Progress (1-100)" />
                     </div>
                     <div className="editField">
-                    <input className="editInp" placeholder="Start date" value={this.state.startString} onClick={() => this.openPicker("start")} />
+                    <input className="editInp" placeholder="Start date" value={this.state.startString}
+                    onFocus={() => this.openPicker("start")}
+                    onClick={() => this.openPicker("start")} />
                     </div>
                     <div className="editField">
-                    <input className="editInp" placeholder="Release date" value={this.state.endString} onClick={() => this.openPicker("end")} />
+                    <input className="editInp" placeholder="Release date" value={this.state.endString} 
+                    onFocus={() => this.openPicker("end")}
+                    onClick={() => this.openPicker("end")} />
                     </div>
                     <div className="editField">
                     <input className="editInp" placeholder="Description" style={{flex: 0.3}} />

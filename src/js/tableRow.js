@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Line } from 'rc-progress';
+import { status } from "./data";
 import { EditBox } from "./editBox";
 import Button from '@material-ui/core/Button';
 import DialogTitle from '@material-ui/core/DialogTitle';
@@ -62,7 +63,7 @@ class TableRow extends Component {
                         <Line percent={this.props.details.progress}
                         style={{width: "200px"}} strokeWidth="6" trailWidth="6" strokeColor="#2532FF" />
                     </div>
-                    <div className="cell inprog" data-title="status">
+                    <div className={`cell ${status[this.props.details.status].class}`} data-title="status">
                         {this.props.details.status}
                     </div>
                     <div className="cell" data-title="sdate">
