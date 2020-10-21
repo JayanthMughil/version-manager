@@ -108,6 +108,10 @@ class AddBox extends Component {
         this.sdateRef.current.value = "";
         this.rdateRef.current.value = "";
         this.descRef.current.value = "";
+        this.setState({
+            startString: "",
+            endString: ""
+        });
     }
 
     addEntry = () => {
