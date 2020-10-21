@@ -3,7 +3,7 @@ import DateFnsUtils from "@date-io/date-fns"; // import
 import { DatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
 import {validateProgress, validateVersion} from "./utils";
 import { showAlert } from "./alertBox";
-import { status, productInfo, versionArray } from "./data";
+import { status, productInfo, versionArray, saveData } from "./data";
 
 class AddBox extends Component {
 
@@ -124,6 +124,7 @@ class AddBox extends Component {
         versionArray.push(entryObj.vname);
         productInfo.push(entryObj);
         this.props.reRender();
+        saveData();
     }
 
     handleEntryAdd = () => {

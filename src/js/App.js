@@ -1,8 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import { Content } from "./content";
+import { initData } from "./data";
 import '../style/App.css';
 
 class App extends Component {
+
+  constructor (props) {
+	  super(props);
+	  this.state = {
+		  isLoaded: false
+	  };
+  }
+
+  componentDidMount = () => {
+	initData();
+	this.setState({
+		isLoaded: true
+	});
+  }
 
   render () {
     return (
@@ -18,7 +33,10 @@ class App extends Component {
 						</div>
 					</div>
 				</div>
-				<Content />
+				<Suspense fallback={<div>Loading ...</div>}>
+					{this.state.isLoaded ?
+					<Content /> : ""}
+				</Suspense>
 			</div>
 			<div className="alertDiv" id="alertBox" />
 		</>

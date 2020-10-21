@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Line } from 'rc-progress';
-import { status, productInfo, versionArray } from "./data";
+import { status, productInfo, versionArray, saveData } from "./data";
 import { EditBox } from "./editBox";
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
@@ -54,6 +54,7 @@ class TableRow extends Component {
         versionArray.splice(this.props.index, 1);
         productInfo.splice(this.props.index, 1);
         this.props.reRender();
+        saveData();
     }
 
     render () {

@@ -3,7 +3,7 @@ import DateFnsUtils from "@date-io/date-fns"; // import
 import { DatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
 import {validateProgress, validateVersion} from "./utils";
 import { showAlert } from "./alertBox";
-import { status, productInfo, versionArray } from "./data";
+import { status, productInfo, versionArray, saveData } from "./data";
 
 class EditBox extends Component {
 
@@ -78,7 +78,9 @@ class EditBox extends Component {
     }
 
     checkVersion = () => {
-        validateVersion(this.versRef.current.value);
+        if (this.versRef.current.value !== this.props.details.vname) {
+            validateVersion(this.versRef.current.value);
+        }
     }
 
     checkProgress = () => {
@@ -116,15 +118,25 @@ class EditBox extends Component {
         versionArray.splice(this.props.index, 1, entryObj.vname);
         productInfo.splice(this.props.index, 1, entryObj);
         this.props.reRender();
+        saveData();
     }
 
     handleEntryEdit = () => {
         if (this.versRef.current.value !== "" && this.progRef.current.value !== "" && this.descRef.current.value !== "" && this.sdateRef.current.value !== "") {
-            if (validateVersion(this.versRef.current.value) && validateProgress(this.progRef.current.value)) {
-                this.editEntry();
-                this.props.closeEditBox();
-                showAlert({msg: "Entry edited successfully", severity: "success"});
+            if (this.versRef.current.value === this.props.details.vname) {
+                if (validateProgress(this.progRef.current.value)) {
+                    this.editEntry();
+                    this.props.closeEditBox();
+                    showAlert({msg: "Entry edited successfully", severity: "success"});
+                }
+            } else {
+                if (validateProgress(this.progRef.current.value) && validateVersion(this.versRef.current.value)) {
+                    this.editEntry();
+                    this.props.closeEditBox();
+                    showAlert({msg: "Entry edited successfully", severity: "success"});
+                }
             }
+    
         } else {
             let text = "";
             if (this.versRef.current.value === "") {
